@@ -36,10 +36,7 @@ export class Header extends Component {
                 <Button >Map</Button>
               </Link>
 
-              <Link to="/create">
-                <Button >Create</Button>
-              </Link>
-
+              
               <Link to="/list">
                 <Button >List</Button>
               </Link>
@@ -52,9 +49,12 @@ export class Header extends Component {
                 </Link>
 
                 :
+                <Link to="/create">
+                <Button >Create</Button>
                 <Fab className="AppBar-Login" variant="extended" onClick={this.handleLogout}>
                   Logout
-                </Fab>
+                  </Fab>
+                  </Link>
               }
 
             </div>
