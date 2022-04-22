@@ -17,6 +17,7 @@ export class Header extends Component {
 
   handleLogout(event) {
     firebase.auth().signOut();
+    window.location.reload();
   }
   render() {
     return (
@@ -25,11 +26,15 @@ export class Header extends Component {
           <Toolbar className="">
             <Link to="/">
               <Typography variant="h6" className="AppBar-title">
-                AirBnb
+                AirBNB
               </Typography>
             </Link>
 
             <div className="ml-auto">
+
+              <Link to="/map">
+                <Button >Map</Button>
+              </Link>
 
               <Link to="/create">
                 <Button >Create</Button>
